@@ -4,11 +4,383 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GRAVI Concept Services</title>
+    <meta name="theme-color" content="#111111">
+    <meta name="description" content="GRAVI Concept Services accompagne les entreprises dans leur communication et leur développement numérique.">
+    <title>GRAVI Concept Services | Communiquer autrement</title>
+
+    <style>
+        :root {
+            --orange: #ff7900;
+            --noir: #111111;
+            --gris: #1b1b1b;
+            --blanc: #ffffff;
+            --texte: #c8c8c8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--noir);
+            color: var(--blanc);
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .conteneur {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        header {
+            border-bottom: 1px solid #292929;
+            padding: 20px 0;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 23px;
+            font-weight: 900;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--orange);
+        }
+
+        nav {
+            display: flex;
+            gap: 22px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: var(--orange);
+        }
+
+        .hero {
+            padding: 100px 0 90px;
+            background:
+                radial-gradient(ellipse at 90% 20%,
+                #42240f 0%, #111111 48%);
+        }
+
+        .etiquette {
+            display: inline-block;
+            color: var(--orange);
+            border: 1px solid #744016;
+            border-radius: 30px;
+            padding: 6px 14px;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-bottom: 24px;
+        }
+
+        h1 {
+            font-size: clamp(38px, 7vw, 68px);
+            line-height: 1.1;
+            max-width: 800px;
+            margin-bottom: 24px;
+        }
+
+        h1 span {
+            color: var(--orange);
+        }
+
+        .hero p {
+            color: var(--texte);
+            max-width: 650px;
+            font-size: 17px;
+            margin-bottom: 30px;
+        }
+
+        .bouton {
+            display: inline-block;
+            background: var(--orange);
+            color: #111111;
+            font-weight: bold;
+            padding: 13px 22px;
+            border-radius: 6px;
+            transition: 0.2s;
+        }
+
+        .bouton:hover {
+            background: #ff9b42;
+            transform: translateY(-2px);
+        }
+
+        .bouton-secondaire {
+            display: inline-block;
+            border: 1px solid #666666;
+            padding: 12px 22px;
+            border-radius: 6px;
+            margin-left: 10px;
+        }
+
+        section {
+            padding: 75px 0;
+        }
+
+        .surtitre {
+            color: var(--orange);
+            font-size: 13px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        h2 {
+            font-size: clamp(28px, 4vw, 40px);
+            margin: 10px 0 16px;
+        }
+
+        .intro {
+            max-width: 650px;
+            color: var(--texte);
+            margin-bottom: 35px;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .carte {
+            background: var(--gris);
+            border: 1px solid #303030;
+            border-radius: 10px;
+            padding: 25px;
+            transition: 0.2s;
+        }
+
+        .carte:hover {
+            border-color: var(--orange);
+            transform: translateY(-4px);
+        }
+
+        .numero {
+            color: var(--orange);
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .carte h3 {
+            margin: 12px 0 8px;
+            font-size: 19px;
+        }
+
+        .carte p {
+            color: var(--texte);
+            font-size: 14px;
+        }
+
+        .apropos {
+            background: #191919;
+        }
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact .intro {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        footer {
+            border-top: 1px solid #303030;
+            padding: 25px 0;
+            text-align: center;
+            color: #aaaaaa;
+            font-size: 13px;
+        }
+
+        footer span {
+            color: var(--orange);
+        }
+
+        @media (max-width: 700px) {
+            .navigation {
+                flex-direction: column;
+            }
+
+            nav {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 14px;
+            }
+
+            .hero {
+                padding: 70px 0;
+            }
+
+            .services {
+                grid-template-columns: 1fr;
+            }
+
+            .bouton-secondaire {
+                margin: 12px 0 0;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <h1>GRAVI Concept Services</h1>
-    <p>Communiquer autrement.</p>
-    <p>Bienvenue dans notre univers numérique.</p>
+
+    <header>
+        <div class="conteneur navigation">
+            <a href="#accueil" class="logo">
+                GRAVI<span>.</span>
+            </a>
+
+            <nav aria-label="Navigation principale">
+                <a href="#accueil">Accueil</a>
+                <a href="#services">Services</a>
+                <a href="#apropos">À propos</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="accueil">
+            <div class="conteneur">
+                <span class="etiquette">
+                    COMMUNICATION • CRÉATIVITÉ • DIGITAL
+                </span>
+
+                <h1>
+                    Nous créons des idées
+                    qui génèrent <span>de l'impact.</span>
+                </h1>
+
+                <p>
+                    GRAVI Concept Services accompagne les entreprises,
+                    les ONG et les porteurs de projets dans leur
+                    communication et leur développement numérique.
+                </p>
+
+                <a href="#services" class="bouton">
+                    Découvrir nos services
+                </a>
+
+                <a href="#apropos" class="bouton-secondaire">
+                    Qui sommes-nous ?
+                </a>
+            </div>
+        </section>
+
+        <section id="services">
+            <div class="conteneur">
+                <span class="surtitre">Notre expertise</span>
+                <h2>Nos services</h2>
+
+                <p class="intro">
+                    Des solutions créatives et numériques pour
+                    valoriser votre image, développer votre visibilité
+                    et faire avancer vos projets.
+                </p>
+
+                <div class="services">
+                    <article class="carte">
+                        <span class="numero">01 / DESIGN</span>
+                        <h3>Design graphique</h3>
+                        <p>
+                            Création de logos, affiches, flyers,
+                            cartes de visite et supports publicitaires.
+                        </p>
+                    </article>
+
+                    <article class="carte">
+                        <span class="numero">02 / VIDÉO</span>
+                        <h3>Production audiovisuelle</h3>
+                        <p>
+                            Tournage, montage vidéo, reportages,
+                            publicités et contenus pour les réseaux sociaux.
+                        </p>
+                    </article>
+
+                    <article class="carte">
+                        <span class="numero">03 / DIGITAL</span>
+                        <h3>Communication numérique</h3>
+                        <p>
+                            Gestion des réseaux sociaux, création
+                            de sites web et stratégie de visibilité.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="apropos" id="apropos">
+            <div class="conteneur">
+                <span class="surtitre">Qui sommes-nous ?</span>
+                <h2>Votre vision, notre créativité.</h2>
+
+                <p class="intro">
+                    Chez GRAVI Concept Services, nous croyons qu'une
+                    communication efficace ne se limite pas à transmettre
+                    un message. Elle doit valoriser votre identité,
+                    rapprocher votre organisation de son public et
+                    créer de véritables opportunités.
+                </p>
+
+                <strong>
+                    GRAVI, c'est communiquer autrement.
+                </strong>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <div class="conteneur">
+                <span class="surtitre">Parlons de votre projet</span>
+                <h2>Prêt à créer de l'impact ?</h2>
+
+                <p class="intro">
+                    Vous avez une idée, une entreprise ou un projet
+                    à valoriser ? Contactez notre équipe pour en discuter.
+                </p>
+
+                <a
+                    class="bouton"
+                    href="https://wa.me/243895647118"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Discuter sur WhatsApp
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="conteneur">
+            © 2026 <span>GRAVI Concept Services</span>.
+            Tous droits réservés.
+            <p>Communiquer autrement.</p>
+        </div>
+    </footer>
+
 </body>
 </html>
